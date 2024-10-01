@@ -1,0 +1,15 @@
+.circle {
+    position: relative;
+    display: flex;
+    width: 530px;
+    height: 530px;
+    border-radius: 50%;
+    border: 1px solid var(--text-color)
+}
+
+.item {
+    position: absolute;
+    top: -28px;
+    right: 240px;
+    transform-origin: 32px 292px;
+}

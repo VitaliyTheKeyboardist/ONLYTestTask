@@ -1,0 +1,11 @@
+.primary,
+.secondary {
+    font-family: 'PTSans';
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 160px;
+    color: var(--counter-primary)
+}
+.secondary {
+    color: var(--counter-secondary);
+}
