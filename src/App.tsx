@@ -1,12 +1,12 @@
-import './App.scss';
-import AppTest from './components/appTest/appTest';
+import "./App.scss"
+import MainPage from "./pages/mainPage/mainPage"
 
 function App() {
   return (
     <div className="App">
-      <AppTest />
+      <MainPage />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

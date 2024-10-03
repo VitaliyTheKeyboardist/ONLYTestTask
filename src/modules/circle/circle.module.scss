@@ -4,12 +4,13 @@
     width: 530px;
     height: 530px;
     border-radius: 50%;
-    border: 1px solid var(--text-color)
+    border: 1px solid var(--border-color);
+    rotate: 30deg;
 }
 
 .item {
     position: absolute;
     top: -28px;
-    right: 240px;
-    transform-origin: 32px 292px;
+    right: 236px;
+    transform-origin: 28px 292px;
 }

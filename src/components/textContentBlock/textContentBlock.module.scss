@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  gap: 80px;
+  width: 100%;
+  overflow: auto;
+}
+
+.textContentBlock {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 400px;
+  gap: 15px;
+}
+
+.date {
+  font-family: "BebasNeue";
+  font-size: 25px;
+  color: var(--date-color);
+}
+
+.text {
+  font-family: "PTSans";
+  font-size: 20px;
+  color: var(--text-color);
+}

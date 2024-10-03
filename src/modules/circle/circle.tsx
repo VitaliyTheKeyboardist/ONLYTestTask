@@ -1,8 +1,9 @@
 import Dot from "../../components/dot/dot"
+
 import styles from "./circle.module.scss"
 
 const Circle = () => {
-  const mock = [1, 2, 3, 4]
+  const mock = [1, 2, 3, 4, 5, 6]
   return (
     <div className={styles.circle}>
       {mock.map((index) => {
@@ -12,28 +13,10 @@ const Circle = () => {
 
         return (
           <div className={styles.item} style={{ rotate: `${rotate}deg` }}>
-            <Dot style={`-${rotate}deg`}/>
+            <Dot style={rotate}/>
           </div>
         )
       })}
-      {/* <div className={styles.item}>
-        <Dot />
-      </div>
-      <div className={styles.item}>
-        <Dot />
-      </div>
-      <div className={styles.item}>
-        <Dot />
-      </div>
-      <div className={styles.item}>
-        <Dot />
-      </div>
-      <div className={styles.item}>
-        <Dot />
-      </div>
-      <div className={styles.item}>
-        <Dot />
-      </div> */}
     </div>
   )
 }

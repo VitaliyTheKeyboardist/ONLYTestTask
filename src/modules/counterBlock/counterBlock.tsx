@@ -1,4 +1,5 @@
 import YearsCounter from "../../components/yearsCounter/yearsCounter"
+
 import styles from "./counterBlock.module.scss"
 
 const CounterBlock = () => {

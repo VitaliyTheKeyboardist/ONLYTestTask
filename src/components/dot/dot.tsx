@@ -2,11 +2,13 @@ import { useState } from "react"
 import styles from "./dot.module.scss"
 
 export interface IDot {
-    style?: string
+  style: number 
 }
 
 const Dot = ( { style }: IDot) => {
   const [type, setType] = useState<"dot" | "number">("dot")
+
+  const rotate = style + 30
 
   const handleClick = (type: string) => {
     if (type === "dot") setType("number")
@@ -14,7 +16,7 @@ const Dot = ( { style }: IDot) => {
   }
 
   return (
-    <div className={styles.container} style={{rotate: `${style}`}}>
+    <div className={styles.container} style={{rotate: `-${rotate}deg`}}>
       <button className={styles[type]} onClick={() => handleClick(type)}>
         6
       </button>
