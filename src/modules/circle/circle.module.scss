@@ -5,7 +5,7 @@
     height: 530px;
     border-radius: 50%;
     border: 1px solid var(--border-color);
-    rotate: 30deg;
+    transition: rotate 1s;
 }
 
 .item {
@@ -13,4 +13,5 @@
     top: -28px;
     right: 236px;
     transform-origin: 28px 292px;
+    z-index: 1;
 }

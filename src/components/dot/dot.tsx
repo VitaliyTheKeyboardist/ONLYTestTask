@@ -1,25 +1,42 @@
-import { useState } from "react"
+import { IDot } from "../../types/components/dot"
+
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxToolkitHooks"
+import {
+  setCurrentChoice,
+  setPreviousChoice,
+  setRotateValue,
+} from "../../store/slices/historicalDates/historicalDatesSlice"
+import { historicalDatesSelector } from "../../store/slices/historicalDates/historicalDatesSelector"
+
 import styles from "./dot.module.scss"
 
-export interface IDot {
-  style: number 
-}
+const Dot = ({ style, item }: IDot) => {
+  const dispatch = useAppDispatch()
 
-const Dot = ( { style }: IDot) => {
-  const [type, setType] = useState<"dot" | "number">("dot")
+  const { currentChoice, rotateValue } = useAppSelector(historicalDatesSelector)
 
-  const rotate = style + 30
+  const rotate = -(style + rotateValue)
 
-  const handleClick = (type: string) => {
-    if (type === "dot") setType("number")
-    if (type === "number") setType("dot")
+  const active = currentChoice === item.id
+
+  const handleClick = () => {
+    dispatch(setPreviousChoice(currentChoice))
+    dispatch(setCurrentChoice(item.id))
+    dispatch(setRotateValue(style))
   }
 
   return (
-    <div className={styles.container} style={{rotate: `-${rotate}deg`}}>
-      <button className={styles[type]} onClick={() => handleClick(type)}>
-        6
-      </button>
+    <div
+      className={styles.container}
+      style={{ rotate: `${rotate}deg` }}
+      onClick={handleClick}
+    >
+      <p className={active ? styles.label : styles.hidden}>{item.label}</p>
+      <div className={active ? styles.number : styles.dot}>
+        <button className={active ? styles.number : styles.dot}>
+          {item.id}
+        </button>
+      </div>
     </div>
   )
 }

@@ -1,8 +1,6 @@
-import styles from './line.module.scss'
+import { ILine } from '../../types/components/line'
 
-export interface ILine {
-    type: 'horizontal' | 'vertical'
-}
+import styles from './line.module.scss'
 
 const Line = ({ type }: ILine) => {
   return (

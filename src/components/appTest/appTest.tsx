@@ -11,7 +11,6 @@ const AppTest = () => {
       <TitleBlock />
       <CounterBlock />
       <Circle />
-      <TextContentBlock />
     </>
   )
 }
