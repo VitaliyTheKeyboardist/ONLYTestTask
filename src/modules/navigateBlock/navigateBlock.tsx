@@ -13,6 +13,7 @@ const NavigateBlock = () => {
   const { numberOfItems, currentChoice } = useAppSelector(
     historicalDatesSelector
   )
+
   const dispatch = useAppDispatch()
 
   const firstNumber = `0${currentChoice}`
