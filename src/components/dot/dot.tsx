@@ -10,18 +10,20 @@ import { historicalDatesSelector } from "../../store/slices/historicalDates/hist
 
 import styles from "./dot.module.scss"
 
-const Dot = ({ style, item }: IDot) => {
+const Dot = ({ style, item, index }: IDot) => {
   const dispatch = useAppDispatch()
 
   const { currentChoice, rotateValue } = useAppSelector(historicalDatesSelector)
 
+  const number = index + 1
+
   const rotate = -(style + rotateValue)
 
-  const active = currentChoice === item.id
+  const active = currentChoice === number
 
   const handleClick = () => {
     dispatch(setPreviousChoice(currentChoice))
-    dispatch(setCurrentChoice(item.id))
+    dispatch(setCurrentChoice(number))
     dispatch(setRotateValue(style))
   }
 
@@ -34,7 +36,7 @@ const Dot = ({ style, item }: IDot) => {
       <p className={active ? styles.label : styles.hidden}>{item.label}</p>
       <div className={active ? styles.number : styles.dot}>
         <button className={active ? styles.number : styles.dot}>
-          {item.id}
+          {number}
         </button>
       </div>
     </div>

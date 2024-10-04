@@ -5,6 +5,7 @@ export interface IHistoricalDates {
     numberOfItems: number
     currentChoice: number
     previousChoice: number
+    baseRotateValue: number
     rotateValue: number
     rotateRatio: number
 }

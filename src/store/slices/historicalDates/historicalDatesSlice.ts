@@ -7,7 +7,8 @@ const initialState: IHistoricalDates = {
   numberOfItems: Dates.historicalDates.length,
   currentChoice: 1,
   previousChoice: 1,
-  rotateValue: 30,
+  baseRotateValue: 360 / Dates.historicalDates.length / 2,
+  rotateValue: 360 / Dates.historicalDates.length / 2,
   rotateRatio: 360 / Dates.historicalDates.length,
 }
 
@@ -34,8 +35,7 @@ const historicalDates = createSlice({
       state.previousChoice = action.payload
     },
     setRotateValue(state: IHistoricalDates, action: PayloadAction<number>) {
-      const baseRotateValue = 30
-      state.rotateValue = baseRotateValue - action.payload
+      state.rotateValue = state.baseRotateValue - action.payload
     },
   },
 })

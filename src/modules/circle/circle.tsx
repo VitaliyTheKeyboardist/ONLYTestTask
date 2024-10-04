@@ -20,7 +20,7 @@ const Circle = () => {
             style={{ rotate: `${rotate}deg` }}
             key={item.id}
           >
-            <Dot style={rotate} item={item} />
+            <Dot style={rotate} item={item} index={index}/>
           </div>
         )
       })}
