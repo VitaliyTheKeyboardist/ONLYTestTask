@@ -2,6 +2,7 @@
   "name": "folder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vitaliythekeyboardist.github.io/ONLYTestTask/",
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@reduxjs/toolkit": "^2.2.7",
