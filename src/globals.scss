@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "BebasNeue";
-  src: url(./assets/fonts/BebasNeue-Regular.ttf)
+  src: url(./assets/fonts/BebasNeue-Regular.ttf);
 }
 
 body {
@@ -24,9 +24,10 @@ code {
 :root {
   --base-background: #fff;
   --text-color: #42567a;
-  --date-color: #3877EE;
+  --date-color: #3877ee;
   --counter-primary: #5d5fef;
   --counter-secondary: #ef5da8;
   --dot-border: rgba(48, 62, 88, 0.5);
   --border-color: rgba(66, 86, 122, 0.1);
+  --line-color: #c7cdd9;
 }

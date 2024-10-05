@@ -19,22 +19,22 @@
 }
 
 .swiperSlide {
-  width: fit-content;
-
-  @media screen and (max-width: 1024px) {
-    & {
-      margin-right: 25px;
-    }
-  }
+    width: fit-content;
 }
 
 .sliderContainerMobile {
-    
-  @media screen and (max-width: 1024px) {
-    & {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
 }

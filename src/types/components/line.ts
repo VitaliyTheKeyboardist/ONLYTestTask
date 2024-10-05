@@ -1,3 +1,3 @@
 export interface ILine {
-    type: 'horizontal' | 'vertical'
+  type: "horizontal" | "vertical" | "horizontalMobile"
 }

@@ -8,6 +8,12 @@
   height: 100%;
   background-color: var(--base-background);
   z-index: 1;
+
+  @media screen and (max-width: 1024px) {
+    & {
+      display: none;
+    }
+  }
 }
 .leftContainer {
     left: 0px;

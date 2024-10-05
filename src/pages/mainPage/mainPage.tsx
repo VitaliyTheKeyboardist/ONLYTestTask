@@ -10,6 +10,9 @@ const MainPage = () => {
         <PageMarking />
         <PageContent />
       </div>
+      <div className={styles.pageWrapMobile}>
+        <PageContent />
+      </div>
     </>
   )
 }

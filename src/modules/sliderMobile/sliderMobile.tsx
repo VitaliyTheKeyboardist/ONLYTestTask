@@ -1,22 +1,21 @@
 import { useLayoutEffect, useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper/modules"
+import { Navigation, Pagination } from "swiper/modules"
 import gsap from "gsap"
 import TextContentBlock from "../../components/textContentBlock/textContentBlock"
 
 import { useAppSelector } from "../../hooks/reduxToolkitHooks"
 import { historicalDatesSelector } from "../../store/slices/historicalDates/historicalDatesSelector"
 
-import SliderNavigateButton from "../../components/sliderNavigateButtons/sliderNavigateButton"
+import Line from "../../components/line/line"
 
 import "swiper/scss"
 import "swiper/css/pagination"
-
 import Label from "../../components/label/label"
-import Line from "../../components/line/line"
-import styles from "./slider.module.scss"
 
-const Slider = () => {
+import styles from "./sliderMobile.module.scss"
+
+const SliderMobile = () => {
   const { content, currentChoice } = useAppSelector(historicalDatesSelector)
 
   const swiperRef = useRef(null)
@@ -40,7 +39,7 @@ const Slider = () => {
         <Line type="horizontalMobile" />
         <Swiper
           className={styles.swiper}
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
           navigation
           spaceBetween={80}
           slidesPerView={"auto"}
@@ -52,12 +51,10 @@ const Slider = () => {
               </SwiperSlide>
             )
           })}
-          <SliderNavigateButton type="leftArrow" isActive={true} />
-          <SliderNavigateButton type="rightArrow" isActive={true} />
         </Swiper>
       </div>
     </>
   )
 }
 
-export default Slider
+export default SliderMobile

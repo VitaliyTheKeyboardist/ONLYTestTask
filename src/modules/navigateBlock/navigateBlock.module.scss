@@ -4,6 +4,15 @@
   width: 120px;
   height: 88px;
   gap: 20px;
+  
+  @media screen and (max-width: 1024px) {
+    & {
+      position: absolute;
+      height: fit-content;
+      bottom: 0;
+      gap: 10px;
+    }
+  }
 }
 
 .counter {
@@ -13,6 +22,12 @@
 }
 
 .buttonsBlock {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+
+  @media screen and (max-width: 1024px) {
+    & {
+      gap: 8px;
+    }
+  }
 }
